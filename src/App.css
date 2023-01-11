@@ -1,14 +1,133 @@
-.App {
-  text-align: center;
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #f1c40f;
   min-height: 100vh;
   display: flex;
+  padding: 50px;
   flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-letter-container {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.letter-container {
+  width: 50%;
+  margin-right: 25px;
+  float: left;
+}
+
+.photo-container {
+  width: 50%;
+  margin-left: 25px;
+  float: right;
+
+  /* align photo in the center of the div */
   align-items: center;
   justify-content: center;
+}
+
+.App-title {
+  color: #ffffff;
+}
+
+.App-title-top {
+  margin-top: 0;
+}
+
+.App-title-right {
+  text-align: right;
+}
+
+.App-description {
+  margin: 25px 0 0 0;
+}
+
+.App-author {
+  margin: 75px 0 0 0;
+  font-weight: 600;
+}
+
+.App-SLC-photoshoot {
+  width: 100%;
+}
+
+.App-rolling-text {
+  background-color: #000000;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.App-rolling-text-container {
+  display: flex;
+  font-size: 1.5em;
+  color: #ffffff;
+
+  border-top: 8px solid #f1c40f;
+  border-bottom: 8px solid #f1c40f;
+}
+
+.App-rolling-text-content {
+  padding-right: 10px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.App-main {
+  background-color: #00384b;
+  min-height: 100vh;
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+/* Underline on hover animation */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  font-weight: 600;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Media queries to adapt letter arrangement */
+@media (max-width: 1200px) {
+  .App-letter-container {
+    flex-direction: column;
+  }
+
+  .letter-container {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+
+  .photo-container {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 50px;
+    float: none;
+  }
 }
