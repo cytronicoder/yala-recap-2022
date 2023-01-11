@@ -30,7 +30,7 @@ function App() {
           </div>
         </div>
 
-        <h1 className="App-title App-title-right">YALA Camp 2022!</h1>
+        <h1 className="App-title App-title-right">...YALA Camp 2022!</h1>
       </header>
 
       <main className="App-main" id="photos">
