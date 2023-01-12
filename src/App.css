@@ -1,3 +1,16 @@
+.App-logo-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 25px;
+}
+
+.App-logo {
+  width: 150px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
 .App-header {
   background-color: #f1c40f;
   min-height: 100vh;
@@ -52,8 +65,10 @@
   font-weight: 600;
 }
 
-.App-SLC-photoshoot {
+.App-YALA-photoshoot {
   width: 100%;
+  margin: 50px 0 0 0;
+  border-radius: 10px;
 }
 
 .App-rolling-text {
@@ -114,6 +129,19 @@
 
 /* Media queries to adapt letter arrangement */
 @media (max-width: 1200px) {
+  .App-logo-container {
+    position: relative;
+    margin-left: 25px;
+  }
+
+  .App-logo:hover {
+    transform: scale(1.1);
+  }
+
+  .App-logo {
+    width: 100px;
+  }
+
   .App-letter-container {
     flex-direction: column;
   }
