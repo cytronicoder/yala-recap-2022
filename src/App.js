@@ -1,4 +1,5 @@
 import YALAPhoto from './YALA_photoshoot.jpg';
+import IJHSLogo from './ijhs_logo.png';
 
 import PhotoGallery from './PhotoGallery';
 
@@ -9,6 +10,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <div className="App-logo-container">
+        <a href="https://ijhscommunity.org/" target="_blank" rel="noreferrer">
+          <img src={IJHSLogo} className="App-logo" alt="IJHS Logo" />
+        </a>
+      </div>
+
       <header className="App-header">
         <h1 className="App-title App-title-top">A look back at...</h1>
 
