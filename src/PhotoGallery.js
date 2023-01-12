@@ -5,10 +5,10 @@ const PhotoGallery = () => {
     return (
         <div className="photo-gallery">
             {times(5, Number).map(rowNum => (
-                <div className="column">
+                <div className="column" key={rowNum}>
                     {times(5, Number).map(colNum => (
                         <img
-                            key={rowNum * 5 + colNum}
+                            key={colNum}
                             src={`${process.env.PUBLIC_URL}/photos/${rowNum * 5 + colNum}.jpg`}
                             alt="YALA Camp 2022"
                         />
