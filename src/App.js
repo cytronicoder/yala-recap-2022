@@ -1,4 +1,7 @@
-import SLCPhoto from './photos/the_slc_gang.jpeg';
+import YALAPhoto from './YALA_photoshoot.jpg';
+
+import PhotoGallery from './PhotoGallery';
+
 import Marquee from 'react-marquee-slider';
 import times from 'lodash/times';
 import './App.css';
@@ -26,7 +29,7 @@ function App() {
           </div>
 
           <div className="photo-container">
-            <img src={SLCPhoto} className="App-SLC-photoshoot" alt="SLC" />
+            <img src={YALAPhoto} className="App-YALA-photoshoot" alt="SLC" />
           </div>
         </div>
 
@@ -34,6 +37,7 @@ function App() {
       </header>
 
       <main className="App-main" id="photos">
+        <PhotoGallery />
       </main>
 
       <footer className="App-rolling-text">

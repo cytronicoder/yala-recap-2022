@@ -52,8 +52,9 @@
   font-weight: 600;
 }
 
-.App-SLC-photoshoot {
+.App-YALA-photoshoot {
   width: 100%;
+  border-radius: 10px;
 }
 
 .App-rolling-text {
