@@ -5,9 +5,27 @@ import PhotoGallery from './PhotoGallery';
 
 import Marquee from 'react-marquee-slider';
 import times from 'lodash/times';
+
+import JSZip from 'jszip';
+import { saveAs } from 'file-saver';
+
 import './App.css';
 
 function App() {
+  // download all photos as a zip file
+  const downloadAllPhotos = () => {
+    const zip = new JSZip();
+    const folder = zip.folder('YALA Camp 2022 Photos');
+
+    times(25, Number).forEach(id => {
+      folder.file(`YALA Camp 2022 - ${id}.jpg`, fetch(`${process.env.PUBLIC_URL}/photos/${id}.jpg`).then(res => res.blob()));
+    });
+
+    zip.generateAsync({ type: 'blob' }).then(content => {
+      saveAs(content, 'YALA Camp 2022 Photos.zip');
+    });
+  };
+
   return (
     <div className="App">
       <div className="App-logo-container">
@@ -33,18 +51,26 @@ function App() {
             <p className="App-author">
               - The IJHS Global Student Leadership Council (GSLC)
             </p>
+            <p className="App-note">
+              Pssst... if you want to download any of the photos, just click on them!
+              (You can also click on the button at the bottom of the page to download all of the photos at once.)
+            </p>
           </div>
 
           <div className="photo-container">
             <img src={YALAPhoto} className="App-YALA-photoshoot" alt="SLC" />
+            <h1 className="App-title App-title-right">...YALA Camp 2022!</h1>
           </div>
         </div>
-
-        <h1 className="App-title App-title-right">...YALA Camp 2022!</h1>
       </header>
 
       <main className="App-main" id="photos">
         <PhotoGallery />
+        <div className="App-download-container">
+          <button className="App-download-button" onClick={downloadAllPhotos}>
+            Download All Photos
+          </button>
+        </div>
       </main>
 
       <footer className="App-rolling-text">
