@@ -1,8 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders header', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const header = screen.getByText(/A look back at.../i);
+  expect(header).toBeInTheDocument();
+});
+
+test('renders photo gallery', () => {
+  render(<App />);
+  const photoGallery = screen.getByTestId('photo-gallery');
+  expect(photoGallery).toBeInTheDocument();
+});
+
+test('renders download all photos button', () => {
+  render(<App />);
+  const downloadAllPhotosButton = screen.getByText(/Download All Photos/i);
+  expect(downloadAllPhotosButton).toBeInTheDocument();
 });

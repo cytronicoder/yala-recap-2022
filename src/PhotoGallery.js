@@ -11,7 +11,7 @@ const PhotoGallery = () => {
     };
     
     return (
-        <div className="photo-gallery">
+        <div id="photo-gallery" data-testid="photo-gallery">
             {times(5, Number).map(rowNum => (
                 <div className="column" key={rowNum}>
                     {times(5, Number).map(colNum => (
