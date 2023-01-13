@@ -1,4 +1,5 @@
-.photo-gallery {
+/* id related to the gallery */
+#photo-gallery {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
