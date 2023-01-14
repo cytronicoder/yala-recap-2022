@@ -3,13 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 0 4px;
   justify-content: center;
 }
 
 .column {
-  flex: 18%;
-  max-width: 18%;
+  flex: 15%;
+  max-width: 50%;
   padding: 0 4px;
 }
 
@@ -30,7 +29,7 @@
 
 @media screen and (max-width: 1200px) {
   .column {
-    flex: 50%;
+    flex: 25%;
     max-width: 50%;
   }
 }
