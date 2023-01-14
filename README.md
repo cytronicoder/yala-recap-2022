@@ -1,4 +1,4 @@
-### 📂 This repository is now archived as a finished project.
+### 📂 This repository is now archived as a finished project
 
 # YALA 2022 Recap
 
@@ -15,3 +15,16 @@
 ## For those who are interested
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+If you want to tinker with the code, you can [fork this repository](https://github.com/cytronicoder/yala-recap-2022/fork) and clone it to your local machine. Then, you can run the following commands to get started:
+
+```bash
+# Install dependencies
+npm install
+
+# Run the app in development mode
+npm start
+
+# Build the app for production
+npm run build
+```
