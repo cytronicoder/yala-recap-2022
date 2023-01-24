@@ -12,12 +12,12 @@ const PhotoGallery = () => {
     
     return (
         <div id="photo-gallery" data-testid="photo-gallery">
-            {times(5, Number).map(rowNum => (
+            {times(4, Number).map(rowNum => (
                 <div className="column" key={rowNum}>
-                    {times(5, Number).map(colNum => (
+                    {times(9, Number).map(colNum => (
                         <img
                             key={colNum}
-                            src={`${process.env.PUBLIC_URL}/photos/${rowNum * 5 + colNum}.jpg`}
+                            src={`${process.env.PUBLIC_URL}/photos/${rowNum * 9 + colNum}.jpg`}
                             alt="YALA Camp 2022"
                             onClick={downloadImage}
                         />
