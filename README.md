@@ -1,5 +1,3 @@
-### 📂 This repository is now archived as a finished project
-
 # YALA 2022 Recap
 
 ![YALA Photoshoot](./src/YALA_photoshoot.jpg)
